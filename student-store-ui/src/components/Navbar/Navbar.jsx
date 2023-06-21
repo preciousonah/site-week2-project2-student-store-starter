@@ -4,7 +4,7 @@ import "./Navbar.css"
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <p>Navbar</p>
+      <p></p>
     </nav>
   )
 }
