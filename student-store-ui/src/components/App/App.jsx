@@ -7,13 +7,13 @@ import Sidebar from "../Sidebar/Sidebar"
 import Home from "../Home/Home"
 import "./App.css"
 import Banner from "../Banner/Banner"
+import Search from "../SearchForm/SearchForm"
 // import About from "../About/About"
 // import CheckoutForm from "../CheckoutForm/CheckoutForm"
 // import Contact from "../Contact/Contact"
 // import Footer from "../Footer/Footer"
 // import Grid from "../Grid/Grid"
 // import Header from "../Header/Header"
-// import Search from "../SearchForm/SearchForm"
 
 
 export default function App() {
@@ -26,6 +26,7 @@ export default function App() {
           <Navbar />
           <Logo />
           <Banner />
+          <Search/>
           <Sidebar />
           <Home />
         </main>
