@@ -7,7 +7,8 @@ import Home from "../Home/Home";
 import "./App.css";
 import Banner from "../Banner/Banner";
 import Search from "../SearchForm/SearchForm";
-import Products from "../Products/Products"; 
+import Product from "../Product/Product"; 
+
 // import About from "../About/About"
 // import CheckoutForm from "../CheckoutForm/CheckoutForm"
 // import Contact from "../Contact/Contact"
@@ -25,7 +26,11 @@ export default function App() {
     .then(response => response.json())
     .then(data => {
       console.log(data); // Check the response data
-      setProducts(data);
+      // print(data.get("products"))
+      const products = data.products
+      // console.log(data[products])
+      console.log(`Product name ${products[1].name}`)
+      setProducts(products);
     })
     .catch(error => console.log(error));
   }, []);
@@ -38,9 +43,9 @@ export default function App() {
           <Logo />
           <Banner />
           <Search />
-          <Products/>
+  
           <Sidebar />
-          <Products products={products} /> {/* Pass the products state as props */}
+          <Product products={products} /> {/* Pass the products state as props */}
           <Home />
         </main>
       </BrowserRouter>
