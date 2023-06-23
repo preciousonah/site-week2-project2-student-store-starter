@@ -7,7 +7,9 @@ import Home from "../Home/Home";
 import "./App.css";
 import Banner from "../Banner/Banner";
 import Search from "../SearchForm/SearchForm";
-import Product from "../Product/Product"; 
+import ProductGrid from "../ProductGrid/ProductGrid"; 
+import ProductCard from "../ProductCard/ProductCard"; 
+import Categories from "../Categories/Categories";
 
 // import About from "../About/About"
 // import CheckoutForm from "../CheckoutForm/CheckoutForm"
@@ -43,9 +45,9 @@ export default function App() {
           <Logo />
           <Banner />
           <Search />
-  
+          <Categories />
           <Sidebar />
-          <Product products={products} /> {/* Pass the products state as props */}
+          <ProductGrid products={products} /> 
           <Home />
         </main>
       </BrowserRouter>
