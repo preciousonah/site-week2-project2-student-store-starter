@@ -1,0 +1,19 @@
+.searchInput {
+    width: 300px;
+    padding: 5px;
+    margin-right: 10px;
+    background-color: #fff;
+    color: aliceblue;
+    
+  }
+  
+  .searchBtn {
+    padding: 50px 10px;
+    color: aliceblue;
+    box-sizing: border-box;
+    max-width: var(-- content-width);
+    width: 70%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+  }

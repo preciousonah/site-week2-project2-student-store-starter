@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-import Logo from "../Logo/Logo";
+// import Logo from "../Logo/Logo";
 import Sidebar from "../Sidebar/Sidebar";
 import Home from "../Home/Home";
 import "./App.css";
-import Banner from "../Banner/Banner";
+import Hero from "../Hero/Hero";
 import Search from "../Search/Search";
-import ProductGrid from "../ProductGrid/ProductGrid";
 import Categories from "../Categories/Categories";
+import ProductGrid from "../ProductGrid/ProductGrid";
+import ProductDetails from "../ProductDetails/ProductDetails";
+
+
+
 
 export default function App() {
   const [products, setProducts] = useState([]); // State to store the products
@@ -61,13 +65,20 @@ export default function App() {
       <BrowserRouter>
         <main>
           <Navbar />
-          <Logo />
-          <Banner />
+          
+          <Hero />
           <Search onSearch={handleSearch} />
           <Categories selectCategory={handleCategorySelect} />
+          
+          <Routes>
+            <Route path = "/" element= {<ProductGrid products={filteredProducts} />}/>
+            <Route path = "/product/:id" element= {<ProductDetails />}/>
+          </Routes>
+
+
           <Sidebar />
-          <ProductGrid products={filteredProducts} />
           <Home />
+
         </main>
       </BrowserRouter>
     </div>

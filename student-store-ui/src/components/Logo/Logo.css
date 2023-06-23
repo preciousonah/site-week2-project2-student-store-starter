@@ -1,5 +1,11 @@
-a {
-    display: inline-block;
-    /* Add any additional styling for the link */
-  }
-  
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust the margin as per your needs */
+}
+
+.codepathLogo img {
+  width: 50px; /* Adjust the width and height as per your needs */
+  height: 50px;
+  /* Add any additional styling you want for the logo */
+}
