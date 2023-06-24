@@ -10,7 +10,6 @@ import Categories from "../Categories/Categories";
 import ProductGrid from "../ProductGrid/ProductGrid";
 import ProductDetails from "../ProductDetails/ProductDetails";
 
-
 export default function App() {
   const [products, setProducts] = useState([]); // State to store the products
   const [filteredProducts, setFilteredProducts] = useState([]); // State to store the filtered products
@@ -22,9 +21,7 @@ export default function App() {
     fetch("https://codepath-store-api.herokuapp.com/store")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data); // Check the response data
         const products = data.products;
-        // console.log(`Product name ${products[1].name}`);
         setProducts(products);
         setFilteredProducts(products); // Set the initial filtered products as all products
       })
@@ -50,7 +47,6 @@ export default function App() {
       const filteredProducts = products.filter(
         (product) => product.category === category.toLowerCase()
       );
-      console.log("filtered products: ", filteredProducts);
       setFilteredProducts(filteredProducts);
     }
   };
@@ -64,16 +60,13 @@ export default function App() {
       <BrowserRouter>
         <main>
           <Navbar />
-          
           <Hero />
           <Search onSearch={handleSearch} />
           <Categories selectCategory={handleCategorySelect} />
-          
           <Routes>
             <Route path="/" element={<ProductGrid products={filteredProducts} />} />
             <Route path="/product/:id" element={<ProductDetails />} />
           </Routes>
-
           <Sidebar isExpanded={isSidebarExpanded} onToggle={handleSidebarToggle} />
           <Home />
         </main>

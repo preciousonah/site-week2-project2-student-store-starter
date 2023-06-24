@@ -7,7 +7,7 @@ import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 
 const Product = ({ products }) => {
-  console.log(products);
+ 
 
   if (!products) {
     return <div>Loading...</div>; // Display a loading state or message while products are being fetched

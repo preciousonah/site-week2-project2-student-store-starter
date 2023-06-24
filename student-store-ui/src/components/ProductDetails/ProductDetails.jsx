@@ -14,7 +14,6 @@ export default function ProductDetails() {
     fetch(`https://codepath-store-api.herokuapp.com/store/${id}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data); // Check the response data
         setProduct(data.product);
       })
       .catch((error) => console.log(error));

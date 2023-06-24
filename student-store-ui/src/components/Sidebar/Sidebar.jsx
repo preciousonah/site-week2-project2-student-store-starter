@@ -12,7 +12,7 @@ export default function Sidebar() {
   return (
     <section className={`sidebar ${isExpanded ? "expanded" : ""}`}>
       <button className="menu" onClick={handleMenuClick}>
-        Menu
+        CART
       </button>
 
       {isExpanded && (

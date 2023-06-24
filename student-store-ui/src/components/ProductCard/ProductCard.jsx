@@ -7,7 +7,7 @@ const ProductCard = ({ product }) => {
  const [count, setCount] = useState(0);
 
 const handleIncrement = (event) => {
-    console.log("Handling increment");
+
     event.preventDefault();
     
     setCount(count + 1);
@@ -29,7 +29,7 @@ const handleDecrement = (event) => {
         <button onClick={handleIncrement}>+</button>
         <button onClick={handleDecrement}>-</button>
       </div>
-      <p>Count: {count}</p>
+      <p>{count}</p>
       
     </div>
   );
