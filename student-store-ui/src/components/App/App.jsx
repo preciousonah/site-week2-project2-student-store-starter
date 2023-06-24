@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-// import Logo from "../Logo/Logo";
 import Sidebar from "../Sidebar/Sidebar";
 import Home from "../Home/Home";
 import "./App.css";
@@ -12,12 +11,11 @@ import ProductGrid from "../ProductGrid/ProductGrid";
 import ProductDetails from "../ProductDetails/ProductDetails";
 
 
-
-
 export default function App() {
   const [products, setProducts] = useState([]); // State to store the products
   const [filteredProducts, setFilteredProducts] = useState([]); // State to store the filtered products
   const [selectedCategory, setSelectedCategory] = useState("All categories"); // State to store the selected category
+  const [isSidebarExpanded, setIsSidebarExpanded] = useState(false); // State to track the sidebar expansion
 
   useEffect(() => {
     // Fetch the API data
@@ -50,15 +48,16 @@ export default function App() {
     } else {
       // Filter the products based on the selected category
       const filteredProducts = products.filter(
-        (product) => {
-          // console.log({ "product.category": product.category, "buttonCategory: ": category.toLowerCase(), "equality: ": product.category === category.toLowerCase()})
-          return (product.category === category.toLowerCase())
-        });
-      console.log("filtered products: ", filteredProducts)
+        (product) => product.category === category.toLowerCase()
+      );
+      console.log("filtered products: ", filteredProducts);
       setFilteredProducts(filteredProducts);
     }
   };
 
+  const handleSidebarToggle = () => {
+    setIsSidebarExpanded(!isSidebarExpanded);
+  };
 
   return (
     <div className="app">
@@ -71,14 +70,12 @@ export default function App() {
           <Categories selectCategory={handleCategorySelect} />
           
           <Routes>
-            <Route path = "/" element= {<ProductGrid products={filteredProducts} />}/>
-            <Route path = "/product/:id" element= {<ProductDetails />}/>
+            <Route path="/" element={<ProductGrid products={filteredProducts} />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
           </Routes>
 
-
-          <Sidebar />
+          <Sidebar isExpanded={isSidebarExpanded} onToggle={handleSidebarToggle} />
           <Home />
-
         </main>
       </BrowserRouter>
     </div>

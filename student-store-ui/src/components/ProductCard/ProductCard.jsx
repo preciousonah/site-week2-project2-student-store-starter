@@ -26,8 +26,8 @@ const handleDecrement = (event) => {
       <h4>{product.name}</h4>
       <p>Price: ${product.price}</p>
       <div>
-        <button onClick={handleIncrement}>Increment</button>
-        <button onClick={handleDecrement}>Decrement</button>
+        <button onClick={handleIncrement}>+</button>
+        <button onClick={handleDecrement}>-</button>
       </div>
       <p>Count: {count}</p>
       
