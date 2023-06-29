@@ -1,6 +1,7 @@
 
 
 import React from 'react';
+import "./ShoppingCart.css";
 
 const ShoppingCart = ({ cartItems }) => {
   const calculateCost = (price, quantity) => {
@@ -16,7 +17,8 @@ const ShoppingCart = ({ cartItems }) => {
         subtotal += totalCost;
 
         return (
-          <div key={item.id}>
+
+          <div key={item.id} className="header">
             <h4>Name: {item.name}</h4>
             <p>Quantity: {item.quantity}</p>
             <p>Price: {item.price}</p>
