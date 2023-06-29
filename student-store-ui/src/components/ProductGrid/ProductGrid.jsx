@@ -6,7 +6,7 @@ import About from "../About/About";
 import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 
-const Product = ({ products }) => {
+const ProductGrid = ({ products, addToCart, decrementCart}) => {
  
 
   if (!products) {
@@ -19,7 +19,7 @@ const Product = ({ products }) => {
       {<div className="grid-container">
         {products.map((product) => (
           <Link key={product.id} to={`/product/${product.id}`}>
-           <ProductCard key = {product.id} product = {product}/>
+           <ProductCard key = {product.id} product = {product} addToCart={addToCart} decrementCart = {decrementCart}/>
           </Link>
         ))}
       </div> }
@@ -28,4 +28,4 @@ const Product = ({ products }) => {
   );
 };
 
-export default Product;
+export default ProductGrid;

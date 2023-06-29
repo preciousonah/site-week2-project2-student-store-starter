@@ -1,7 +1,7 @@
 .container {
     max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
+    /* margin: 5px; */
+    padding: 0px;
   }
   
   h1 {
@@ -13,6 +13,7 @@
   p {
     margin-bottom: 20px;
     color: #333;
+    font-size: 16px;
   }
   
   ul {
@@ -34,4 +35,9 @@
   .phone-link:hover {
     text-decoration: underline;
   }
+  
+
+  
+
+  
   

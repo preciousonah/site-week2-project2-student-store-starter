@@ -5,7 +5,7 @@ import Logo from "../Logo/Logo";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <Logo /> {/* Render the Logo component */}
+      <Logo /> 
       <nav>
         <ul>
           <li><a href="/">Home</a></li>

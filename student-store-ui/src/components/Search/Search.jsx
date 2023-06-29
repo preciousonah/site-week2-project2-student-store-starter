@@ -17,6 +17,7 @@ export default function Search({ onSearch }) {
     <div className="searchBtn">
       <form onSubmit={handleSubmit}>
         <input
+          className="searchInput"
           type="text"
           placeholder="Search for products"
           value={searchTerm}
