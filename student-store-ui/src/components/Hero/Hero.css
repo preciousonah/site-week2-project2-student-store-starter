@@ -36,7 +36,7 @@
     color: white;
   }
 
-  h1 {
+  .intro h1 {
     display: block;
     color: aliceblue;
     font-size: 60px;
@@ -44,7 +44,7 @@
     margin: 0;
     padding: 0;
   }
-  p {
+  .intro p {
     color: whitesmoke;
     font-size: 20px;
     margin-top: 10px;

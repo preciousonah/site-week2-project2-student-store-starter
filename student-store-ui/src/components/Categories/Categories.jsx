@@ -8,26 +8,24 @@ export default function Categories({ selectCategory }) {
   }
 
   return (
-    <nav className="categories">
-      <nav>
+      <nav className="navbar2">
         <ul>
           <li>
-            <button onClick={() => handleClick("Clothing")}>Clothing</button>
+            <a onClick={() => handleClick("Clothing")}>Clothing</a>
           </li>
           <li>
-            <button onClick={() => handleClick("Food")}>Food</button>
+            <a onClick={() => handleClick("Food")}>Food</a>
           </li>
           <li>
-            <button onClick={() => handleClick("Accessories")}>Accessories</button>
+            <a onClick={() => handleClick("Accessories")}>Accessories</a>
           </li>
           <li>
-            <button onClick={() => handleClick("Tech")}>Tech</button>
+            <a onClick={() => handleClick("Tech")}>Tech</a>
           </li>
           <li>
-            <button onClick={() => handleClick("All categories")}>All categories</button>
+            <a onClick={() => handleClick("All categories")}>All categories</a>
           </li>
         </ul>
       </nav>
-    </nav>
   );
 }

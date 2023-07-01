@@ -21,7 +21,7 @@ const handleDecrement = (event) => {
     if (count > 0) {
       setCount(count - 1);
       decrementCart(product)
-    }
+    } 
   };
   return (
     <div className="product-card">

@@ -40,3 +40,8 @@
     color: #333;
   }
   
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    color: black;
+  }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Search.css";
+import { FaSearch} from 'react-icons/fa';
 
 export default function Search({ onSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -21,10 +22,9 @@ export default function Search({ onSearch }) {
           type="text"
           placeholder="Search for products"
           value={searchTerm}
-          onChange={handleChange}
-         
+          onChange={handleChange}       
         />
-        <button type="submit">Search</button>
+        <button type="submit" className="submitBtn"><FaSearch/></button>
       </form>
     </div>
   );

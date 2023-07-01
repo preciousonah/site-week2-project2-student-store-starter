@@ -5,16 +5,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer-container">
-        <div className="footer-section">
-          <h3>Categories</h3>
-          <ul>
-            <li>All Categories</li>
-            <li>Clothing</li>
-            <li>Food</li>
-            <li>Accessories</li>
-            <li>Tech</li>
-          </ul>
-        </div>
+     
         <div className="footer-section">
           <h3>Company</h3>
           <ul>

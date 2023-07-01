@@ -93,19 +93,35 @@ export default function App() {
       }
       // return updatedItems;
   };
-  const decrementCart = (product) => {
+  // const decrementCart = (product) => {
 
-      const updatedItems = { ...cartItems };
-      if (product.id in updatedItems) {
+  //     const updatedItems = { ...cartItems };
+  //     if (product.id in updatedItems) {
         
-        updatedItems[product.id].quantity -= 1;
-        setCartItems(updatedItems)
-      } else {
-        updatedItems[product.id] = { ...product, quantity: 1 };
-        setCartItems(updatedItems)
-      }
-  };
+  //       updatedItems[product.id].quantity -= 1;
 
+        // if (updatedItems[product.id].quantity === 0;) {
+        //   const newCart = ShoppingCart.filter(item) => item.id !== products;
+        // }
+
+  //       setCartItems(updatedItems)
+      
+  //     } else {
+  //       updatedItems[product.id] = { ...product, quantity: 1 };
+  //       setCartItems(updatedItems)
+  //     }
+  // };
+  const decrementCart = (product) => {
+    const updatedItems = { ...cartItems };
+    if (product.id in updatedItems) {
+      updatedItems[product.id].quantity -= 1;
+      if (updatedItems[product.id].quantity === 0) {
+        delete updatedItems[product.id]; // Remove the item from the cart if the quantity reaches zero
+      }
+      setCartItems(updatedItems);
+    }
+  };
+  
 
 console.log(cartItems)
   return (

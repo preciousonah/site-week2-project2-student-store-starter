@@ -27,5 +27,7 @@
   
   .button {
     font-size: 20px;
-    color: black;
+    /* color: black; */
+    color: #00c385;
+    border-color: #00c385;;
   }

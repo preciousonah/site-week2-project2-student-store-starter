@@ -1,3 +1,26 @@
 .shoppingCart {
     /* background-color: beige;x */
+    padding: 20px 10px;
+    margin: 10px;
+    color: aliceblue;
 }
+.shoppingCart p{
+    /* background-color: beige;x */
+  
+    color: white;
+}
+
+.shoppingCart table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .shoppingCart th,
+  .shoppingCart td {
+    padding: 10px; /* Adjust the padding value as needed */
+  }
+  
+  .shoppingCart th {
+    text-align: left;
+  }
+  
