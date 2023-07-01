@@ -1,12 +1,9 @@
 .shoppingCart {
-    /* background-color: beige;x */
     padding: 20px 10px;
     margin: 10px;
     color: aliceblue;
 }
 .shoppingCart p{
-    /* background-color: beige;x */
-  
     color: white;
 }
 
@@ -17,7 +14,7 @@
   
   .shoppingCart th,
   .shoppingCart td {
-    padding: 10px; /* Adjust the padding value as needed */
+    padding: 10px;
   }
   
   .shoppingCart th {

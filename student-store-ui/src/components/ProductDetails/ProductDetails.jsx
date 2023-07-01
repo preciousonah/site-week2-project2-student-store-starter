@@ -24,9 +24,6 @@ export default function ProductDetails() {
       <p>{product?.name}</p>
       <p>{product?.description}</p>
       <img src={product?.image} alt={product?.image} />
-      <p>
-       
-      </p>
     </div>
   );
 }

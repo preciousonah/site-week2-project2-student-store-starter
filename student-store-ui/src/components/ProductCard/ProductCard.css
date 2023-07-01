@@ -15,7 +15,7 @@
   
   .product-card p {
     font-size: 14px;
-    color: darkslategray;
+    color: var(--main-color);
   }
   
   .product-card img {
@@ -27,7 +27,6 @@
   
   .button {
     font-size: 20px;
-    /* color: black; */
-    color: #00c385;
-    border-color: #00c385;;
+    color: var(--banner-color);
+    border-color: var(--banner-color);
   }

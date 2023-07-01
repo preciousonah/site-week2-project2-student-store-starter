@@ -56,23 +56,3 @@ const ShoppingCart = ({ cartItems }) => {
 };
 
 export default ShoppingCart;
-
-
-//for (elem in/of cartItems => )
-    // console.log("we're here")
-    //cartItems = {
-    //  "1" : product1 {},
-    //  "2" : product2 {},
-    //  "12" : {
-    //           "id": 12,
-    //           "name: watch,
-    //              ...
-    // }
-    // }
-
-    //Object.keys(cartItems) = ["id1","id2"]
-    //Object.values(cartItems) = [product1, product2]
-
-    // console.log(Object.keys(cartItems));
-    //
-    //

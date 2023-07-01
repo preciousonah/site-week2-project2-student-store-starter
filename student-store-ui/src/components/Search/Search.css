@@ -2,16 +2,13 @@
     width: 400px;
     height: 40px;
     padding: 5px;
-    /* margin-right: 10px; */
-    background-color: #fff;
     color: black;
     border-color: black;
-    /* border-radius: 15px; */
   }
 
   .searchInput:focus {
     outline: none !important;
-    border-color: #2c4047;
+    border-color: var(--main-color);
   }
 
   
@@ -31,21 +28,7 @@
 .submitBtn {
     width: 40px;
     height: 40px;
-    /* padding: 5px; */
-    background-color: #fff;
-    /* border-radius: 15px; */
-    background-color: #00c385;
+    background-color: var(--banner-color);
     font-size: 13px;
-    color: #fff;
+    color: var(--white);
 }
-
-/* .searchInput {
-  width: 400px;
-  height: 40px;
-  padding: 5px;
-  margin-right: 10px;
-  background-color: #fff;
-  color: black;
-  border-color: black;
-  border-radius: 15px;
-} */

@@ -11,12 +11,6 @@ export default function Sidebar({ cartItems }) {
   const [email, setEmail] = useState("");
   const [showInfoMessage, setShowInfoMessage] = useState(false);
   
-  // const [isReceiptVisible, setIsReceiptVisible] = useState(false);
-  // const[subTotal, setsubTotal] = useState(0)
-
-  // const handleCheckout = () => {
-  //   setIsReceiptVisible(true);
-  // };
 
   const handleMenuClick = () => {
     setIsExpanded(!isExpanded);
@@ -32,10 +26,7 @@ export default function Sidebar({ cartItems }) {
 
 
   return (
-    // <><ShoppingCart cartItems={cartItems}/></>
     <section className={`sidebar ${isExpanded ? "expanded" : ""}`}>
-      {/* { <button className="menu" onClick={handleMenuClick}>< AiOutlineArrowLeft /></button>}
-       */}
         <button className="menu" onClick={handleMenuClick}>
         {isExpanded ? <AiOutlineArrowRight /> : <AiOutlineArrowLeft />}
       </button>
@@ -46,7 +37,6 @@ export default function Sidebar({ cartItems }) {
 
           <div className="sidebar-item">
             <h2 className="menu">Payment info</h2> 
-            {/* <span className="material-icons">monetization_on</span>  */}
             <form>
             <input
           className="searchInput"
@@ -76,11 +66,8 @@ export default function Sidebar({ cartItems }) {
             <button className="menu" onClick={handleCheckoutButtonClick}>Checkout</button>
           </div>
 
-          {/* in the handcheckbutton click function i need an if statement where it checks if the name and email have been provided */}
-
           <div className="sidebar-item">
             {<h1 className="menu">Checkout Info</h1> }
-            {/* <span className="material-icons">fact_check</span> */}
             <p>
             A confirmation email will be sent to you so that you can confirm this order.
               Once you have confirmed the order, it will be delivered to your door
